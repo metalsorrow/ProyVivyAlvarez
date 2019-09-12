@@ -105,10 +105,11 @@ h4{
 .pr-3{ padding-right: 3rem !important};
 
 /* Text */
-/* .text-center{text-align: center !important;
+.text-center{text-align: center !important;
   width: 100%;
   float: initial;
-}No funcionan :c */
+}
+/* No funcionan :c */
 .text-start{text-align: start}
 .text-end{text-align: end}
 .text-justify{text-align: justify}
@@ -212,6 +213,14 @@ h4{
   align-items: center;
   justify-content: space-evenly;
   background-color: #E8900C;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .header{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+  }
 }
 .header_titulo {
   color: #ffffff;
@@ -259,111 +268,18 @@ h4{
 
 
 
+/* ================================== */
+/*            PARALAX                 */
+/* ================================== */
+.paralax {
+  min-height: 100vh;
+  background: transparent;
+}
 
 
 
 /* ================================== */
-/*              CAROUSEL              */
-/* ================================== */
-
-#carousel {
-  position: relative;
-}
-#carousel .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-}
-.carousel-inner img {
-  max-height: 50vh;
-  object-fit: cover;
-  filter: grayscale(20%);
-}
-#carousel .overlay .container,
-#carousel .overlay .row {
-  height: 100%;
-}
-#productos * {
-  color: black;
-}
-
-/*Carousel*/
-* {
-  box-sizing: border-box;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  width: 100%;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-.mySlides img {
-  max-height: 80vh;
-  width: 100%;
-  object-fit: cover;
-  filter: grayscale(60%);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 40px;
-  padding: 40px 12px;
-  position: absolute;
-  bottom: 50%;
-  width: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5)
-}
-@media (max-width: 769px) {
-    .text{
-        display:none;
-    }
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-
-
-
-
-
-/* ================================== */
-/*                MAIN                */
+/*                INDEX                */
 /* ================================== */
 
 .descripcion {
@@ -386,6 +302,115 @@ h4{
     width: 100%;
     padding: 0 10%;
 }
+.info{
+  display: block;
+  margin: auto auto;
+  z-index: 2;
+  position: relative;
+
+}
+
+
+
+/* ================================== */
+/*     PRODUCTOS Y DISEÑOS            */
+/* ================================== */
+
+.producto{
+  margin-top: 168px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+
+}
+@media (max-width: 768px) {
+  .producto{
+    margin-top: 0;
+  }
+}
+.producto ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.producto li {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 30px;
+  list-style-type: circle;
+  padding: 12px 30px;
+  background: linear-gradient( to top,#F5F1D5,#ffffff 20% 60%,#F5F1D5);
+}
+
+.producto h2{
+  text-align: center;
+}
+
+
+
+/* ================================== */
+/*            GALLERY                 */
+/* ================================== */
+
+
+
+.gallery-section{
+  width: 100%;
+  padding: 60px 0;
+}
+
+.inner-width{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.gallery-section .gallery{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.gallery-section .image{
+  flex: 25%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-section .image img{
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.gallery-section .image:hover img{
+  transform: scale(1.4) rotate(15deg);
+}
+
+@media screen and (max-width:960px) {
+  .gallery-section .image{
+    flex: 33.33%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .gallery-section .image{
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .gallery-section .image{
+    flex: 100%;
+  }
+}
+
+
+
 
 /* ================================== */
 /*            FOOTER                   */
