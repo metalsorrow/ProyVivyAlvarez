@@ -203,6 +203,11 @@ h4{
     flex-direction: row;
   }
 }
+@media (max-width: 768px) {
+  .contenedor{
+    width: 100%;
+  }
+}
 
 /* ================================== */
 /*              HEADER                */
@@ -214,6 +219,9 @@ h4{
   justify-content: space-evenly;
   background-color: #E8900C;
   width: 100%;
+}
+.header img{
+  width: 120px;
 }
 @media (min-width: 768px) {
   .header{
@@ -328,20 +336,23 @@ h4{
     margin-top: 0;
   }
 }
-.producto ul {
+.cont-icons{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
 }
-.producto li {
-  display: inline-block;
-  font-size: 18px;
-  margin-left: 30px;
-  list-style-type: circle;
-  padding: 12px 30px;
-  background: linear-gradient( to top,#F5F1D5,#ffffff 20% 60%,#F5F1D5);
+.cont-icons .icons{
+  background-color: #E8820C;
+  border-radius: 500px;
+  padding: 30px;
+  margin: 10px;
 }
+.icons img{
+  height: 100px;
+  width: 100px;
+}
+
 
 .producto h2{
   text-align: center;
@@ -422,17 +433,18 @@ h4{
 .footer {
     margin-top: 5vh;
     width: 100%;
-    min-height: 250px;
+    min-height: 120px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column; 
+    text-align: center;
     background-color: #E8900C;
 }
 .footer_redesSociales {
   display: flex;
-  text-align: center;
+  width: 80%;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 .footer_redesSociales img {
   width: 40px;
@@ -442,6 +454,13 @@ h4{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
   margin: 8px;
+}
+.face{
+  margin-right: 100px;
+}
+@media (max-width: 768px) {
+  .face{
+    margin-right: 0;
+  }
 }
