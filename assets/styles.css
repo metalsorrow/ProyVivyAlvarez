@@ -10,6 +10,7 @@
   text-decoration: none;
   box-sizing: border-box;
   border-radius: 6px;
+  list-style-type: none;
 }
 body {
   background-color: #F5F1D5;
@@ -59,6 +60,17 @@ h4{
   margin-top: 2rem;
   margin-bottom: 5rem; 
 }
+/* Background */
+.img-background-1{
+  
+  background: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,0.4)), url(../img/hilos.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F5F1D5;
+  color: #F5F1D5;
+  text-shadow: 2px 2px black;
+}
 /* bottons */
 .button {
   display: inline-block;
@@ -66,7 +78,8 @@ h4{
   color: black;
   border: 2px solid #E8820C;
   border-radius: 2px;
-  margin-top: 40px;
+  margin-top: 20px;
+  cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   font-size: 20px;
@@ -77,39 +90,7 @@ h4{
   color: white;
 }
 
-/* margins */
-.mb-1{ margin-bottom: 1rem !important};
-.mb-2{ margin-bottom: 2rem !important};
-.mb-3{ margin-bottom: 3rem !important};
-.mt-1{ margin-top: 1rem !important};
-.mt-2{ margin-top: 2rem !important};
-.mt-3{ margin-top: 3rem !important};
-.ml-1{ margin-left: 1rem !important};
-.ml-2{ margin-left: 2rem !important};
-.ml-3{ margin-left: 3rem !important};
-.mr-1{ margin-right: 1rem !important};
-.mr-2{ margin-right: 2rem !important};
-.mr-3{ margin-right: 3rem !important};
-/* paddings */
-.pb-1{ padding-bottom: 1rem !important};
-.pb-2{ padding-bottom: 2rem !important};
-.pb-3{ padding-bottom: 3rem !important};
-.pt-1{ padding-top: 1rem !important};
-.pt-2{ padding-top: 2rem !important};
-.pt-3{ padding-top: 3rem !important};
-.pl-1{ padding-left: 1rem !important};
-.pl-2{ padding-left: 2rem !important};
-.pl-3{ padding-left: 3rem !important};
-.pr-1{ padding-right: 1rem !important};
-.pr-2{ padding-right: 2rem !important};
-.pr-3{ padding-right: 3rem !important};
-
 /* Text */
-.text-center{text-align: center !important;
-  width: 100%;
-  float: initial;
-}
-/* No funcionan :c */
 .text-start{text-align: start}
 .text-end{text-align: end}
 .text-justify{text-align: justify}
@@ -133,18 +114,7 @@ h4{
   width: 85%;
   margin: 0 auto;
 }
-.seccion-green {
-  background-color: #FF5800;
-  width: 100%;
-}
-.seccion-yellow{
-  background-color: #FFF100;
-  width: 100%;
-}
-.seccion-Quarz{
-  background-color: #F5F1D5;
-  width: 100%;
-}
+
 .mod-shadow-01{
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -153,6 +123,9 @@ h4{
 }
 .mod-shadow-06{
   background-color: rgba(0, 0, 0, 0.6);
+}
+.mod-light{
+  background-color: #E8820C;
 }
 /* img */
 .img-cover-60vh-r{
@@ -186,12 +159,27 @@ h4{
   justify-content: center;
   text-align: center;
 }
+.flex-row-r{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
 /* Wrap */
 
 
 
-/* Order */
-
+/*Input*/
+input[type='text'],input[type='email'],textarea{
+  background-color: white;
+  border: 1px solid grey;
+  padding: 18px;
+  margin: 2px;
+}
+::placeholder{
+  color: black;
+  font-weight: bolder;
+}
 
 /* responsive */
 @media (min-width: 768px) {
@@ -201,6 +189,9 @@ h4{
   }
   .flex-col-r{
     flex-direction: row;
+  }
+  .flex-row-r{
+    flex-direction: column;
   }
 }
 @media (max-width: 768px) {
@@ -321,7 +312,7 @@ h4{
 
 
 /* ================================== */
-/*     PRODUCTOS Y DISEÑOS            */
+/*  PRODUCTOS / DISEÑOS / CONTACTO    */
 /* ================================== */
 
 .producto{
@@ -353,9 +344,42 @@ h4{
   width: 100px;
 }
 
-
 .producto h2{
   text-align: center;
+}
+.datos{
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+.datos-info{
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.map{
+  width: 90%;
+  margin: 20px 0;
+}
+@media (min-width: 768px){
+  .map{
+    width: 40%;
+  }
+  .datos-info{
+    width: 40%;
+    height: 100%;
+  }
+}
+.contacto,
+.redes{
+  padding: 10px;
+}
+.redes img{
+  width: 100px;
+  margin: 10px;
+}
+.form{
+  padding: 30px 0;
 }
 
 
@@ -448,6 +472,8 @@ h4{
 }
 .footer_redesSociales img {
   width: 40px;
+  background-color: white;
+  border-radius: 500px;
 }
 .insta,.face
 {
